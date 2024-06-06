@@ -1,14 +1,16 @@
+import os
 from setuptools import setup
 
 def readme():
     with open("README.md", "r", encoding="utf-8") as f:
         return f.read()
-    
 
 def requirements():
+    # Print the current working directory to debug
+    print("Current Directory:", os.getcwd())
+    print("Listing Directory Contents:", os.listdir())
     with open("requirements.txt", "r", encoding="utf-8") as f:
         return f.read().splitlines()
-    
 
 setup(
     name="URAG",
